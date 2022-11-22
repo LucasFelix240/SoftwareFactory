@@ -11,17 +11,17 @@
 
 ## Computación 2022
 
-**Asignatura**: <!-- REEMPLAZA este comentario por el nombre de la asignatura -->
+**Asignatura**: <!-- Administración y Gestión de Base de Datos -->
 
-**Nombre TP**: <!-- REEMPLAZA este comentario por el nombre del TP -->
+**Nombre TP**: <!-- SoftwareFactory -->
 
-**Apellido y nombre Alumno**: <!-- REEMPLAZA este comentario por tu apellido y nombre -->
+**Apellido y nombre Alumno**: <!-- Felix Lucas -->
 
-**Curso**: <!-- REEMPLAZA este comentario por tu curso -->
+**Curso**: <!-- 6° 8° -->
 
-# Título del Proyecto
+# Software Factory
 
-_Acá va un párrafo que describa lo que es el proyecto._
+_Se está realizando la persistencia de un sistema de Gestión de Proyectos de software_
 
 ## Comenzando 🚀
 
@@ -53,8 +53,7 @@ Usamos [SemVer](http://semver.org/) para el versionado. Para todas las versiones
 
 _Menciona a todos aquellos que ayudaron a levantar el proyecto desde sus inicios_
 
-* **Max Power** - *Desarrollo* - [Maxpower](https://github.com/maxpower)
-* **Cosme Fulanito** - *Documentación* - [Cosmefulanito](#Cosmefulanito)
+* **Felix Lucas** - *Desarrollo* -
 
 ## Licencia 📄
 
