@@ -11,13 +11,13 @@
 
 ## Computación 2022
 
-**Asignatura**: Administración y Gestión de Base de Datos
+**Asignatura**:  Administración y Gestión de Base de Datos
 
-**Nombre TP**: SoftwareFactory
+**Nombre TP**:  SoftwareFactory
 
-**Apellido y nombre Alumno**: Felix Lucas
+**Apellido y nombre Alumno**:  Felix Lucas
 
-**Curso**: 6° 8°
+**Curso**:  6° 8°
 
 # Software Factory
 
@@ -34,6 +34,7 @@ git clone https://github.com/ET12DE1Computacion/simpleTemplateCSharp
 ### Pre-requisitos 📋
 
 - .NET 6.0.5 (SDK .NET 6.0.300) - [Descargar](https://dotnet.microsoft.com/download/dotnet/6.0)
+- MySQL (Workbench 8.0.31) - [Descargar](https://dev.mysql.com/downloads/workbench/)
 
 ## Despliegue 📦
 
@@ -44,6 +45,7 @@ _Agrega notas adicionales sobre que cosas se debe instalar, configurar y como ha
 _Menciona las herramientas y versiones que utilizaste para crear tu proyecto_
 
 * [Visual Studio Code](https://code.visualstudio.com/#alt-downloads) - Editor de código.
+* [MySQL Workbench](https://dev.mysql.com/downloads/workbench/) - Sistema gestor de bases de datos.
 
 ## Versionado 📌
 
@@ -53,7 +55,7 @@ Usamos [SemVer](http://semver.org/) para el versionado. Para todas las versiones
 
 _Menciona a todos aquellos que ayudaron a levantar el proyecto desde sus inicios_
 
-* **Felix Lucas** - *Desarrollo* -
+* **Felix Lucas** - *Desarrollo* - [LucasFelix240](https://github.com/LucasFelix240)
 
 ## Licencia 📄
 
