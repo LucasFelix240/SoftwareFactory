@@ -11,13 +11,13 @@
 
 ## Computación 2022
 
-**Asignatura**: <!-- Administración y Gestión de Base de Datos -->
+**Asignatura**: Administración y Gestión de Base de Datos
 
-**Nombre TP**: <!-- SoftwareFactory -->
+**Nombre TP**: SoftwareFactory
 
-**Apellido y nombre Alumno**: <!-- Felix Lucas -->
+**Apellido y nombre Alumno**: Felix Lucas
 
-**Curso**: <!-- 6° 8° -->
+**Curso**: 6° 8°
 
 # Software Factory
 
