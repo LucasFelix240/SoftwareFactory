@@ -26,9 +26,8 @@ _Se está realizando la persistencia de un sistema de Gestión de Proyectos de s
 ## Comenzando 🚀
 
 Clonar el repositorio github, desde Github Desktop o ejecutar en la terminal o CMD:
-<!-- cambia el link de abajo al de tu repositorio y BORRA ESTE COMENTARIO -->
 ```
-git clone https://github.com/ET12DE1Computacion/simpleTemplateCSharp
+https://github.com/LucasFelix240/SoftwareFactory.git
 ```
 
 ### Pre-requisitos 📋
