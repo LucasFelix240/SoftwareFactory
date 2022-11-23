@@ -10,7 +10,7 @@ BEGIN
         WHERE P.idProyecto = R.idProyecto
 
         RETURN Resultado;
-END &&
+END $$
 
 DELIMITER $$
 CREATE FUNCTION sueldoMensual (uncuil INT) 

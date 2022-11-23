@@ -49,6 +49,7 @@ BEGIN
         INSERT INTO Proyecto (idProyecto, cuit, descripcion, presupuesto, inicio, fin)
                 VALUES  (unidProyecto, uncuit, unadescripcion, unpresupuesto, uninicio, unfin)
 END $$
+
 DELIMITER $$
 CREATE PROCEDURE altaCliente (uncuit INT,
                                 unarazonSocial VARCHAR(50))
@@ -62,18 +63,18 @@ CREATE PROCEDURE asignarExperiencia (uncuil INT,
                                 unidTecnologia TINYINT,
                                 unacalifacion TINYINT UNSIGNED)
 BEGIN
-	IF (NOT EXISTS (SELECT *
+	IF (EXISTS (SELECT *
 		FROM Experiencia
-                WHERE cuil = uncuil AND idTecnologia = unidTecnologia)) THEN
-                
-		INSERT INTO Experiencia (cuil, idTecnologia, calificacion)
-					VALUES (uncuil, unidTecnologia, unacalificacion);
-	ELSE 
-		UPDATE Experiencia
+                WHERE cuil = uncuil 
+                AND idTecnologia = unidTecnologia))
+                THEN
+                UPDATE Experiencia
 		SET calificacion = unacalificacion
 		WHERE cuil = uncuil
 		AND idTecnologia = unidTecnologia
-		AND calificacion != unacalificacion;
+	ELSE
+        INSERT INTO Experiencia (cuil, idTecnologia, calificacion)
+		VALUES (uncuil, unidTecnologia, unacalificacion);
         END IF;
 END $$
 
@@ -82,17 +83,18 @@ CREATE PROCEDURE finalizarTarea (unidRequerimiento INT,
                                 uncuil INT, 
                                 unaFechaFin DATE)
 BEGIN
-        IF (NOT EXISTS (SELECT *
+        IF (EXISTS (SELECT *
                         FROM Tarea
                         WHERE idRequerimiento = unidRequerimiento
-                        AND cuil = uncuil)) THEN
-                
+                        AND cuil = uncuil
+                        AND fin = NULL)) 
+                        THEN
+                        UPDATE Tarea
+                        SET fin = unaFechaFin
+                        WHERE idTecnologia = unidTecnologia
+                        AND cuil = uncuil;
+        ELSE
                 INSERT INTO Tarea (idRequerimiento, cuil, fin)
                         VALUES (unidRequerimiento, uncuil, unaFechaFin)
-        ELSE
-                UPDATE Tarea
-                SET fin = unaFechaFin
-                WHERE idTecnologia = unidTecnologia
-                AND cuil = uncuil;
-        IF END;
+        END IF;
 END $$
