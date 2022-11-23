@@ -10,8 +10,10 @@ BEGIN
         DECLARE varComplejidad TINYINT;
 
         SELECT calificacion INTO varCalificacion
-        FROM Experiencia
-        WHERE cuil = NEW.cuil;
+        FROM Experiencia E
+        INNER JOIN Requerimiento R ON E.idTecnologia = R.idTecnologia
+        WHERE cuil = NEW.cuil
+        AND E.idTecnologia = R.idTecnologia;
 
         SELECT complejidad INTO varComplejidad
         FROM Requerimiento
