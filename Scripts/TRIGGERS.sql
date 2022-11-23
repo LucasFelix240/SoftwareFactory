@@ -12,8 +12,8 @@ BEGIN
         SELECT calificacion INTO varCalificacion
         FROM Experiencia E
         INNER JOIN Requerimiento R ON E.idTecnologia = R.idTecnologia
-        WHERE cuil = NEW.cuil
-        AND E.idTecnologia = R.idTecnologia;
+        WHERE E.cuil = NEW.cuil
+        AND R.idRequerimiento = NEW.idRequerimiento;
 
         SELECT complejidad INTO varComplejidad
         FROM Requerimiento
@@ -34,3 +34,5 @@ BEGIN
         INSERT INTO Experiencia (cuil, idTecnologia, calificacion)
                         VALUES  (NEW.cuil, idTecnologia, 0);
 END $$
+
+-- Trigger para que falle a proposito
