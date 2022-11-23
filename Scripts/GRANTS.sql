@@ -1,3 +1,4 @@
+USE SoftwareFactory;
 DELIMITER $$
 CREATE USER IF NOT EXISTS 'Administrador'@'%' IDENTIFIED BY 'passAdministrador';
 GRANT SELECT ON SoftwareFactory.* TO 'Administrador'@'%';

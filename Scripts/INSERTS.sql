@@ -1,3 +1,4 @@
+USE SoftwareFactory;
 START TRANSACTION;
 
     INSERT INTO Cliente (cuit, razonSocial)
