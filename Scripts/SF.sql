@@ -18,12 +18,13 @@ CREATE FUNCTION sueldoMensual (uncuil INT)
 BEGIN
         DECLARE Resultado (DECIMAL(10,2));
 
-        SELECT (timestampdiff(YEAR, contratacion, curdate()) * 1000 +
+        SELECT (TIMESTAMPDIFF(YEAR, contratacion, curdate()) * 1000 +
                 SUM(calificacion * costobase)) INTO Resultado
         FROM Empleado E
-        INNER JOIN Experiencia USING (cuil)
-        INNER JOIN Tecnologia USING (idTecnologia)
-        WHERE E.cuil = uncuil;
+        INNER JOIN Experiencia EX ON E.cuil = EX.cuil
+        INNER JOIN Tecnologia T ON EX.idTecnologia = T.idTecnologia
+        WHERE E.cuil = EX.uncuil;
+        AND EX.idTecnologia = T.idTecnologia
         RETURN Resultado;
 END $$
 
