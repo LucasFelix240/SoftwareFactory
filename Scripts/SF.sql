@@ -1,6 +1,8 @@
 -- Active: 1646654372192@@127.0.0.1@3306@softwarefactory
 USE SoftwareFactory;
 DELIMITER $$
+DROP FUNCTION IF EXISTS complejidadPromedio;
+
 CREATE FUNCTION complejidadPromedio (unidProyecto SMALLINT) 
                                         RETURNS FLOAT
                                         READS SQL DATA
@@ -16,6 +18,8 @@ BEGIN
 END $$
 
 DELIMITER $$
+DROP FUNCTION IF EXISTS sueldoMensual;
+
 CREATE FUNCTION sueldoMensual (uncuil INT) 
                         RETURNS DECIMAL(10,2)
                         READS SQL DATA
@@ -34,6 +38,8 @@ BEGIN
 END $$
 
 DELIMITER $$
+DROP FUNCTION IF EXISTS costoProyecto;
+
 CREATE FUNCTION costoProyecto (unidProyecto INT) 
                                 RETURNS DECIMAL(10,2) 
                                 READS SQL DATA

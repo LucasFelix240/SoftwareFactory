@@ -1,6 +1,8 @@
 -- Active: 1646654372192@@127.0.0.1@3306@softwarefactory
 USE SoftwareFactory;
 DELIMITER $$
+DROP TRIGGER IF EXISTS BeforeInsertTarea;
+
 CREATE TRIGGER BeforeInsertTarea BEFORE INSERT ON Tarea
 FOR EACH ROW
 BEGIN
@@ -22,6 +24,8 @@ BEGIN
 END $$
 
 DELIMITER $$
+DROP TRIGGER IF EXISTS AftInsEmpleado;
+
 CREATE TRIGGER AftInsEmpleado AFTER INSERT ON Empleado
 FOR EACH ROW
 BEGIN

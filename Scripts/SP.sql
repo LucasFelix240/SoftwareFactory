@@ -1,6 +1,8 @@
 -- Active: 1646654372192@@127.0.0.1@3306@softwarefactory
 USE SoftwareFactory;
 DELIMITER $$
+DROP PROCEDURE IF EXISTS altaTecnologia;
+
 CREATE PROCEDURE altaTecnologia (unidTecnologia TINYINT,
                                 unatecnologia VARCHAR(20),
                                 uncostoBase DECIMAL(10,2))
@@ -10,6 +12,8 @@ BEGIN
 END $$
 
 DELIMITER $$
+DROP PROCEDURE IF EXISTS altaRequerimiento;
+
 CREATE PROCEDURE altaRequerimiento (unidRequerimiento INT,
                                         unidProyecto SMALLINT,
                                         unidTecnologia TINYINT,
@@ -21,6 +25,8 @@ BEGIN
 END $$
 
 DELIMITER $$
+DROP PROCEDURE IF EXISTS altaTarea;
+
 CREATE PROCEDURE altaTarea (unidRequerimiento INT,
                                 uncuil INT,
                                 uninicio DATE,
@@ -31,6 +37,8 @@ BEGIN
 END $$
 
 DELIMITER $$
+DROP PROCEDURE IF EXISTS altaEmpleado;
+
 CREATE PROCEDURE altaEmpleado (uncuil INT,
                                 unnombre VARCHAR(50),
                                 unapellido VARCHAR(50),
@@ -41,6 +49,8 @@ BEGIN
 END $$
 
 DELIMITER $$
+DROP PROCEDURE IF EXISTS altaProyecto;
+
 CREATE PROCEDURE altaProyecto (unidProyecto SMALLINT,
                                 uncuit INT,
                                 unadescripcion VARCHAR(200),
@@ -53,6 +63,8 @@ BEGIN
 END $$
 
 DELIMITER $$
+DROP PROCEDURE IF EXISTS altaCliente;
+
 CREATE PROCEDURE altaCliente (uncuit INT,
                                 unarazonSocial VARCHAR(50))
 BEGIN
@@ -61,6 +73,8 @@ BEGIN
 END $$
 
 DELIMITER $$
+DROP PROCEDURE IF EXISTS asignarExperiencia;
+
 CREATE PROCEDURE asignarExperiencia (uncuil INT,
                                 unidTecnologia TINYINT,
                                 unacalifacion TINYINT)
@@ -81,6 +95,8 @@ BEGIN
 END $$
 
 DELIMITER $$
+DROP PROCEDURE IF EXISTS finalizarTarea;
+
 CREATE PROCEDURE finalizarTarea (unidRequerimiento INT, 
                                 uncuil INT, 
                                 unaFechaFin DATE)
