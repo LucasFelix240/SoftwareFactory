@@ -1,5 +1,6 @@
 -- Active: 1646654372192@@127.0.0.1@3306@softwarefactory
 USE SoftwareFactory;
+SELECT 'Creando Store Functions' Estado;
 DELIMITER $$
 DROP FUNCTION IF EXISTS complejidadPromedio;
 

@@ -96,4 +96,9 @@ START TRANSACTION;
                         (11, 1000, '2020-01-01', '2021-01-01'),
                         (11, 1300, '2020-01-01', '2021-01-01');
 
+-- Insert para que el Trigger falle a proposito.
+
+INSERT INTO Tarea (idRequerimiento, cuil, inicio, fin)
+        VALUES          (1, 1000, '2022-08-01', '2022-11-23');
+
 COMMIT;

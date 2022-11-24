@@ -1,8 +1,9 @@
 -- Active: 1646654372192@@127.0.0.1@3306@softwarefactory
 USE SoftwareFactory;
+SELECT 'Creando Store Procedures' Estado;
 
 DELIMITER $$
-DROP PROCEDURE IF EXISTS altaTecnologia;
+DROP PROCEDURE IF EXISTS altaTecnologia $$
 
 CREATE PROCEDURE altaTecnologia (unidTecnologia TINYINT,
                                 unatecnologia VARCHAR(20),
@@ -13,7 +14,7 @@ BEGIN
 END $$
 
 DELIMITER $$
-DROP PROCEDURE IF EXISTS altaRequerimiento;
+DROP PROCEDURE IF EXISTS altaRequerimiento $$
 
 CREATE PROCEDURE altaRequerimiento (unidRequerimiento INT,
                                         unidProyecto SMALLINT,
@@ -26,7 +27,7 @@ BEGIN
 END $$
 
 DELIMITER $$
-DROP PROCEDURE IF EXISTS altaTarea;
+DROP PROCEDURE IF EXISTS altaTarea $$
 
 CREATE PROCEDURE altaTarea (unidRequerimiento INT,
                                 uncuil INT,
@@ -38,7 +39,7 @@ BEGIN
 END $$
 
 DELIMITER $$
-DROP PROCEDURE IF EXISTS altaEmpleado;
+DROP PROCEDURE IF EXISTS altaEmpleado $$
 
 CREATE PROCEDURE altaEmpleado (uncuil INT,
                                 unnombre VARCHAR(50),
@@ -50,7 +51,7 @@ BEGIN
 END $$
 
 DELIMITER $$
-DROP PROCEDURE IF EXISTS altaProyecto;
+DROP PROCEDURE IF EXISTS altaProyecto $$
 
 CREATE PROCEDURE altaProyecto (unidProyecto SMALLINT,
                                 uncuit INT,
@@ -64,7 +65,7 @@ BEGIN
 END $$
 
 DELIMITER $$
-DROP PROCEDURE IF EXISTS altaCliente;
+DROP PROCEDURE IF EXISTS altaCliente $$
 
 CREATE PROCEDURE altaCliente (uncuit INT,
                                 unarazonSocial VARCHAR(50))
@@ -74,7 +75,7 @@ BEGIN
 END $$
 
 DELIMITER $$
-DROP PROCEDURE IF EXISTS asignarExperiencia;
+DROP PROCEDURE IF EXISTS asignarExperiencia $$
 
 CREATE PROCEDURE asignarExperiencia (uncuil INT,
                                 unidTecnologia TINYINT,
@@ -96,7 +97,7 @@ BEGIN
 END $$
 
 DELIMITER $$
-DROP PROCEDURE IF EXISTS finalizarTarea;
+DROP PROCEDURE IF EXISTS finalizarTarea $$
 
 CREATE PROCEDURE finalizarTarea (unidRequerimiento INT, 
                                 uncuil INT, 

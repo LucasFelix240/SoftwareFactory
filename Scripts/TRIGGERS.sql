@@ -1,7 +1,8 @@
 -- Active: 1646654372192@@127.0.0.1@3306@softwarefactory
-USE SoftwareFactory;
+USE SoftwareFactory ;
+SELECT 'Creando Triggers' Estado ;
 DELIMITER $$
-DROP TRIGGER IF EXISTS BeforeInsertTarea;
+DROP TRIGGER IF EXISTS BeforeInsertTarea $$
 
 CREATE TRIGGER BeforeInsertTarea BEFORE INSERT ON Tarea
 FOR EACH ROW
@@ -26,7 +27,7 @@ BEGIN
 END $$
 
 DELIMITER $$
-DROP TRIGGER IF EXISTS AftInsEmpleado;
+DROP TRIGGER IF EXISTS AftInsEmpleado $$
 
 CREATE TRIGGER AftInsEmpleado AFTER INSERT ON Empleado
 FOR EACH ROW
@@ -35,8 +36,3 @@ BEGIN
                                 SELECT NEW.cuil, idTecnologia, 0
                                 FROM Tecnologia;
 END $$
-
--- Insert para que el Trigger falle a proposito.
-
-INSERT INTO Tarea (idRequerimiento, cuil, inicio, fin)
-        VALUES          (1, 1700, '2022-08-01', '2022-11-23');

@@ -1,5 +1,6 @@
 -- Active: 1646654372192@@127.0.0.1@3306@softwarefactory
 USE SoftwareFactory;
+SELECT 'Creabdo Usuarios' Estado;
 
 DROP USER IF EXISTS 'Administrador'@'%';
 
