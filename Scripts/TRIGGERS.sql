@@ -32,10 +32,11 @@ CREATE TRIGGER AftInsEmpleado AFTER INSERT ON Empleado
 FOR EACH ROW
 BEGIN
         INSERT INTO Experiencia (cuil, idTecnologia, calificacion)
-                        VALUES  (NEW.cuil, idTecnologia, 0);
+                                SELECT NEW.cuil, idTecnologia, 0
+                                FROM Tecnologia;
 END $$
 
--- Trigger para que falle a proposito
+-- Isert para que el Trigger falle a proposito.
 
 INSERT INTO Empleado (cuil, nombre, apellido, contratacion)
         VALUES          (1700, 'Lucas', 'Felix', '2022-11-23');
