@@ -36,13 +36,7 @@ BEGIN
                                 FROM Tecnologia;
 END $$
 
--- Isert para que el Trigger falle a proposito.
-
-INSERT INTO Empleado (cuil, nombre, apellido, contratacion)
-        VALUES          (1700, 'Lucas', 'Felix', '2022-11-23');
-
-INSERT INTO Experiencia (cuil, idTecnologia, calificacion)
-        VALUES                  (1700, 1, 1);
+-- Insert para que el Trigger falle a proposito.
 
 INSERT INTO Tarea (idRequerimiento, cuil, inicio, fin)
         VALUES          (1, 1700, '2022-08-01', '2022-11-23');
